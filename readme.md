@@ -12,3 +12,5 @@ metric however modifications could be considered starting with this metric
 - Another metric between two skeletons could be the [Hausdorff Distance](https://en.wikipedia.org/wiki/Hausdorff_distance) which is easily described as "the largest smallest distance" between two sets. Basically this amounts to doing the same measurements
 as were done for the euclidean metric although instead of summing over all the distances, for each axonal node find its smallest distance to the dendrite of the other neuron, then, once this has been done for all axons, the maximum of all of these smallest 
 distances is the Hausdorff distance. Code for this can be found in the [catmaid module](https://github.com/htem/catmaid_utils/blob/496740e04e56ca6addd12a1e48ffda69086130ba/catmaid/algorithms/population/distance.py)
+
+I believe the best metric will be something similar to the cylindrical overlap method with the re-sampling optimized. The goal is to sample large enough to dampen human error but get cylinders that follow the axon/dendrite well.
